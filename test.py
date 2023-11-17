@@ -287,6 +287,7 @@ def update_cent(centroids):
             mean_y = total_y/len(points)
             # changing the coordinates of the centroid to mean_x, mean_y, the new coordinates
             centroids[i][0], centroids[i][1] = mean_x, mean_y
+            print(f'\n-> Centroid {i+1} is now at {mean_x, mean_y}\n')
 
 
 def visualise(centroids, colours):
@@ -363,7 +364,7 @@ def main():
     # while the algorithm has not converged
     while True:
         # tell the user which iteration this is
-        print(f"Iteration {n}: ")
+        print(f"\n***** Iteration {n} *****\n")
         # make a deep copy of the points to compare to later
         # the comparison will tell us whether the points have changed their clusters or not
         # in order to determine whether the algorithm has converged
